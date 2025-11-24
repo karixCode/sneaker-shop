@@ -15,8 +15,26 @@
 
       <div v-else-if="sneaker" class="product-content">
         <div class="gallery">
-          <div class="main-image">
-            <img :src="currentImage" :alt="sneaker.name" />
+          <div
+            class="main-image"
+            @mouseenter="showZoom = true"
+            @mouseleave="showZoom = false"
+            @mousemove="handleMouseMove"
+            ref="imageContainer"
+          >
+            <img :src="currentImage" :alt="sneaker.name" ref="mainImage" />
+
+            <div
+              v-show="showZoom"
+              class="zoom-lens"
+              :style="lensStyle"
+            ></div>
+
+            <div
+              v-show="showZoom"
+              class="zoom-result"
+              :style="zoomResultStyle"
+            ></div>
           </div>
           <div class="thumbnails">
             <button
@@ -193,6 +211,12 @@ const addingToCart = ref(false);
 const addSuccess = ref(false);
 const showReviewForm = ref(false);
 
+const showZoom = ref(false);
+const imageContainer = ref(null);
+const mainImage = ref(null);
+const lensPosition = ref({ x: 0, y: 0 });
+const zoomLevel = 2.5; // Уровень увеличения
+
 const reviewForm = ref({
   userName: '',
   rating: 5,
@@ -219,6 +243,27 @@ const canSubmitReview = computed(() => {
   return reviewForm.value.userName.trim() &&
          reviewForm.value.rating > 0 &&
          reviewForm.value.comment.trim();
+});
+
+const lensStyle = computed(() => {
+  return {
+    left: `${lensPosition.value.x}px`,
+    top: `${lensPosition.value.y}px`,
+  };
+});
+
+const zoomResultStyle = computed(() => {
+  if (!imageContainer.value) return {};
+
+  const lensSize = 150;
+  const backgroundX = -lensPosition.value.x * zoomLevel + lensSize / 2;
+  const backgroundY = -lensPosition.value.y * zoomLevel + lensSize / 2;
+
+  return {
+    backgroundImage: `url(${currentImage.value})`,
+    backgroundPosition: `${backgroundX}px ${backgroundY}px`,
+    backgroundSize: `${imageContainer.value.offsetWidth * zoomLevel}px ${imageContainer.value.offsetHeight * zoomLevel}px`,
+  };
 });
 
 const formatPrice = (price) => {
@@ -280,6 +325,24 @@ const submitReview = async () => {
     };
     showReviewForm.value = false;
   }
+};
+
+const handleMouseMove = (e) => {
+  if (!imageContainer.value) return;
+
+  const containerRect = imageContainer.value.getBoundingClientRect();
+  const lensSize = 150;
+
+  let x = e.clientX - containerRect.left;
+  let y = e.clientY - containerRect.top;
+
+  x = Math.max(lensSize / 2, Math.min(x, containerRect.width - lensSize / 2));
+  y = Math.max(lensSize / 2, Math.min(y, containerRect.height - lensSize / 2));
+
+  lensPosition.value = {
+    x: x - lensSize / 2,
+    y: y - lensSize / 2,
+  };
 };
 
 onMounted(async () => {
@@ -365,7 +428,8 @@ onMounted(async () => {
   position: relative;
   background: #f3f4f6;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
+  cursor: crosshair;
 }
 
 .main-image img {
@@ -375,6 +439,50 @@ onMounted(async () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
+}
+
+.zoom-lens {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #2563eb;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(37, 99, 235, 0.15);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4),
+              inset 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.zoom-result {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 2rem);
+  width: 100%;
+  height: 100%;
+  border: 3px solid #2563eb;
+  border-radius: 12px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  overflow: hidden;
+  animation: zoomIn 0.2s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .thumbnails {
@@ -740,6 +848,15 @@ onMounted(async () => {
 @media (max-width: 1024px) {
   .product-content {
     grid-template-columns: 1fr;
+  }
+
+  /* Скрываем zoom на планшетах и мобильных */
+  .zoom-result {
+    display: none !important;
+  }
+
+  .main-image {
+    cursor: default;
   }
 }
 
