@@ -54,7 +54,6 @@
           placeholder="От"
           class="price-input"
         />
-        <span>—</span>
         <input
           v-model.number="localPriceMax"
           @change="onPriceChange"
@@ -247,6 +246,7 @@ watch(() => sneakersStore.priceRange, (newVal) => {
 }
 
 .price-inputs {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -259,6 +259,7 @@ watch(() => sneakersStore.priceRange, (newVal) => {
   border-radius: 8px;
   font-size: 0.875rem;
   transition: border-color 0.3s;
+  min-width: 0;
 }
 
 .price-input:focus {

@@ -110,35 +110,12 @@
       "category": "running"
     },
     {
-      "id": "6",
-      "name": "Stan Smith",
-      "brand": "Adidas",
-      "price": 9990,
-      "images": [
-        "https://images.unsplash.com/photo-1619702306144-9b28c6d89cd8?w=800",
-        "https://images.unsplash.com/photo-1622656237127-c76c4a5b26bb?w=800",
-        "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800"
-      ],
-      "sizes": [
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44
-      ],
-      "category": "lifestyle"
-    },
-    {
       "id": "7",
       "name": "990v5",
       "brand": "New Balance",
       "price": 19990,
       "images": [
-        "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800",
         "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=800",
         "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800"
       ],
@@ -163,53 +140,6 @@
         "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800",
         "https://images.unsplash.com/photo-1603808033587-f65c8b8c2a5c?w=800",
         "https://images.unsplash.com/photo-1603787081207-362bcef7f620?w=800"
-      ],
-      "sizes": [
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45
-      ],
-      "category": "lifestyle"
-    },
-    {
-      "id": "9",
-      "name": "Superstar",
-      "brand": "Adidas",
-      "price": 7990,
-      "images": [
-        "https://images.unsplash.com/photo-1609526572922-7b1c1b5ff01e?w=800",
-        "https://images.unsplash.com/photo-1622656237141-c0046a5e96dc?w=800",
-        "https://images.unsplash.com/photo-1612724189298-89d36b10b26d?w=800"
-      ],
-      "sizes": [
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44
-      ],
-      "category": "lifestyle"
-    },
-    {
-      "id": "10",
-      "name": "Air Force 1",
-      "brand": "Nike",
-      "price": 10990,
-      "images": [
-        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800",
-        "https://images.unsplash.com/photo-1549298916-f52d724204b4?w=800",
-        "https://images.unsplash.com/photo-1596568359553-a56de6970068?w=800"
       ],
       "sizes": [
         36,
@@ -418,14 +348,7 @@
       "createdAt": "2024-10-20T10:30:00Z"
     }
   ],
-  "cartItems": [
-    {
-      "id": "a41e",
-      "sneakerId": "1",
-      "size": 39,
-      "quantity": 1
-    }
-  ],
+  "cartItems": [],
   "orders": [
     {
       "id": "1",

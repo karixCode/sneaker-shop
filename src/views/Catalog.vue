@@ -185,7 +185,7 @@ const totalPages = computed(() => sneakersStore.totalPages);
 
 const viewHistory = computed(() => viewHistoryStore.viewedSneakerIds);
 const viewHistorySneakers = computed(() => {
-  return sneakersStore.sneakers.filter(sneaker => viewHistory.value.includes(Number(sneaker.id))).slice(0, 3);
+  return sneakersStore.sneakers.filter(sneaker => viewHistory.value.includes(Number(sneaker.id))).slice(0, 4);
 });
 
 const visiblePages = computed(() => {
