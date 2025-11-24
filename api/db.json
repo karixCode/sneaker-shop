@@ -1,0 +1,529 @@
+{
+  "sneakers": [
+    {
+      "id": "1",
+      "name": "Air Max 270",
+      "brand": "Nike",
+      "price": 12990,
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800",
+        "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "2",
+      "name": "Ultraboost 21",
+      "brand": "Adidas",
+      "price": 15990,
+      "images": [
+        "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800",
+        "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800",
+        "https://images.unsplash.com/photo-1618898909019-010e4e234c55?w=800"
+      ],
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "category": "running"
+    },
+    {
+      "id": "3",
+      "name": "574 Classic",
+      "brand": "New Balance",
+      "price": 8990,
+      "images": [
+        "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800",
+        "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "4",
+      "name": "Jordan 1 Retro High",
+      "brand": "Nike",
+      "price": 18990,
+      "images": [
+        "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=800",
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800",
+        "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "basketball"
+    },
+    {
+      "id": "5",
+      "name": "ZoomX Vaporfly",
+      "brand": "Nike",
+      "price": 24990,
+      "images": [
+        "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=800",
+        "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800",
+        "https://images.unsplash.com/photo-1594816696481-91988d53db87?w=800"
+      ],
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "running"
+    },
+    {
+      "id": "6",
+      "name": "Stan Smith",
+      "brand": "Adidas",
+      "price": 9990,
+      "images": [
+        "https://images.unsplash.com/photo-1619702306144-9b28c6d89cd8?w=800",
+        "https://images.unsplash.com/photo-1622656237127-c76c4a5b26bb?w=800",
+        "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "7",
+      "name": "990v5",
+      "brand": "New Balance",
+      "price": 19990,
+      "images": [
+        "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800",
+        "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=800",
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "8",
+      "name": "Dunk Low",
+      "brand": "Nike",
+      "price": 11990,
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800",
+        "https://images.unsplash.com/photo-1603808033587-f65c8b8c2a5c?w=800",
+        "https://images.unsplash.com/photo-1603787081207-362bcef7f620?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "9",
+      "name": "Superstar",
+      "brand": "Adidas",
+      "price": 7990,
+      "images": [
+        "https://images.unsplash.com/photo-1609526572922-7b1c1b5ff01e?w=800",
+        "https://images.unsplash.com/photo-1622656237141-c0046a5e96dc?w=800",
+        "https://images.unsplash.com/photo-1612724189298-89d36b10b26d?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "10",
+      "name": "Air Force 1",
+      "brand": "Nike",
+      "price": 10990,
+      "images": [
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800",
+        "https://images.unsplash.com/photo-1549298916-f52d724204b4?w=800",
+        "https://images.unsplash.com/photo-1596568359553-a56de6970068?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "11",
+      "name": "Yeezy Boost 350",
+      "brand": "Adidas",
+      "price": 29990,
+      "images": [
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800",
+        "https://images.unsplash.com/photo-1580234835624-571a58fa5f2b?w=800",
+        "https://images.unsplash.com/photo-1584735174965-9c8f888ebc7c?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "12",
+      "name": "Metcon 7",
+      "brand": "Nike",
+      "price": 13990,
+      "images": [
+        "https://images.unsplash.com/photo-1605408499391-6368c628ef42?w=800",
+        "https://images.unsplash.com/photo-1515396800500-a5019db08c18?w=800",
+        "https://images.unsplash.com/photo-1584590069631-1c180f90a54c?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "training"
+    },
+    {
+      "id": "13",
+      "name": "Fresh Foam 1080",
+      "brand": "New Balance",
+      "price": 16990,
+      "images": [
+        "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800",
+        "https://images.unsplash.com/photo-1520256862855-398228c41684?w=800",
+        "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800"
+      ],
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "running"
+    },
+    {
+      "id": "14",
+      "name": "Blazer Mid '77",
+      "brand": "Nike",
+      "price": 11490,
+      "images": [
+        "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?w=800",
+        "https://images.unsplash.com/photo-1499013819532-e4ff41b00669?w=800",
+        "https://images.unsplash.com/photo-1522149543787-271eef462ec7?w=800"
+      ],
+      "sizes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "category": "lifestyle"
+    },
+    {
+      "id": "15",
+      "name": "NMD_R1",
+      "brand": "Adidas",
+      "price": 12990,
+      "images": [
+        "https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?w=800",
+        "https://images.unsplash.com/photo-1614252368927-b0b298d3c30c?w=800",
+        "https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?w=800"
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "category": "lifestyle"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "sneakerId": "1",
+      "userName": "Алексей Петров",
+      "rating": 5,
+      "comment": "Отличные кроссовки! Очень удобные и стильные. Рекомендую всем!",
+      "createdAt": "2024-11-20T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "sneakerId": "1",
+      "userName": "Мария Иванова",
+      "rating": 4,
+      "comment": "Хорошее качество, но немного маломерят. Советую брать на размер больше.",
+      "createdAt": "2024-11-18T15:30:00Z"
+    },
+    {
+      "id": "3",
+      "sneakerId": "2",
+      "userName": "Дмитрий Смирнов",
+      "rating": 5,
+      "comment": "Лучшие кроссовки для бега! Очень мягкие и комфортные.",
+      "createdAt": "2024-11-15T10:20:00Z"
+    },
+    {
+      "id": "4",
+      "sneakerId": "3",
+      "userName": "Екатерина Волкова",
+      "rating": 5,
+      "comment": "Классика! Подходят к любому стилю одежды.",
+      "createdAt": "2024-11-10T14:45:00Z"
+    },
+    {
+      "id": "5",
+      "sneakerId": "4",
+      "userName": "Андрей Козлов",
+      "rating": 5,
+      "comment": "Легендарные Джорданы! Качество на высоте.",
+      "createdAt": "2024-11-08T09:15:00Z"
+    },
+    {
+      "id": "6",
+      "sneakerId": "4",
+      "userName": "Олеся Морозова",
+      "rating": 4,
+      "comment": "Отличный дизайн, но цена кусается.",
+      "createdAt": "2024-11-05T16:30:00Z"
+    },
+    {
+      "id": "7",
+      "sneakerId": "6",
+      "userName": "Сергей Новиков",
+      "rating": 5,
+      "comment": "Stan Smith - это классика! Удобные и универсальные.",
+      "createdAt": "2024-11-01T11:00:00Z"
+    },
+    {
+      "id": "8",
+      "sneakerId": "10",
+      "userName": "Анна Соколова",
+      "rating": 5,
+      "comment": "Air Force 1 - мои любимые кроссовки! Очень удобные и стильные.",
+      "createdAt": "2024-10-28T13:20:00Z"
+    },
+    {
+      "id": "9",
+      "sneakerId": "11",
+      "userName": "Павел Лебедев",
+      "rating": 4,
+      "comment": "Yeezy выглядят круто, но дороговато для повседневных кроссовок.",
+      "createdAt": "2024-10-25T15:45:00Z"
+    },
+    {
+      "id": "10",
+      "sneakerId": "2",
+      "userName": "Ирина Кузнецова",
+      "rating": 5,
+      "comment": "Ultraboost - самые комфортные кроссовки, которые у меня были!",
+      "createdAt": "2024-10-20T10:30:00Z"
+    },
+    {
+      "id": "78dd",
+      "sneakerId": "2",
+      "userName": "Иван",
+      "rating": 3,
+      "comment": "имба",
+      "createdAt": "2025-11-24T13:51:23.371Z"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "7eeb",
+      "sneakerId": "1",
+      "size": 40,
+      "quantity": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "sneakerId": "1",
+          "size": 42,
+          "quantity": 1,
+          "price": 12990
+        },
+        {
+          "sneakerId": "6",
+          "size": 40,
+          "quantity": 1,
+          "price": 9990
+        }
+      ],
+      "totalAmount": 22980,
+      "status": "delivered",
+      "customer": {
+        "name": "Иван Иванов",
+        "email": "ivan@example.com",
+        "phone": "+7 (999) 123-45-67",
+        "address": "г. Москва, ул. Примерная, д. 123, кв. 45",
+        "paymentMethod": "card"
+      },
+      "createdAt": "2024-11-10T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "items": [
+        {
+          "sneakerId": "4",
+          "size": 43,
+          "quantity": 1,
+          "price": 18990
+        }
+      ],
+      "totalAmount": 18990,
+      "status": "shipped",
+      "customer": {
+        "name": "Мария Петрова",
+        "email": "maria@example.com",
+        "phone": "+7 (999) 234-56-78",
+        "address": "г. Санкт-Петербург, пр. Невский, д. 45, кв. 78",
+        "paymentMethod": "cash"
+      },
+      "createdAt": "2024-11-18T15:30:00Z"
+    },
+    {
+      "id": "3",
+      "items": [
+        {
+          "sneakerId": "10",
+          "size": 41,
+          "quantity": 2,
+          "price": 10990
+        }
+      ],
+      "totalAmount": 21980,
+      "status": "processing",
+      "customer": {
+        "name": "Алексей Смирнов",
+        "email": "alexey@example.com",
+        "phone": "+7 (999) 345-67-89",
+        "address": "г. Екатеринбург, ул. Ленина, д. 88, кв. 12",
+        "paymentMethod": "sbp"
+      },
+      "createdAt": "2024-11-22T10:15:00Z"
+    },
+    {
+      "id": "f6d4",
+      "items": [
+        {
+          "sneakerId": "1",
+          "size": 38,
+          "quantity": 6,
+          "price": 12990
+        }
+      ],
+      "totalAmount": 77940,
+      "status": "pending",
+      "customer": {
+        "name": "Иван Иванов",
+        "email": "eivanov200606@mail.ru",
+        "phone": "+79539272536",
+        "address": "Область Томская, Город Томск, Улица Алтайская дом 169 кв.1",
+        "paymentMethod": "cash"
+      },
+      "createdAt": "2025-11-24T06:55:52.097Z"
+    }
+  ]
+}
