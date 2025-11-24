@@ -5,7 +5,6 @@
       <button @click="resetFilters" class="reset-btn">Сбросить</button>
     </div>
 
-    <!-- Search -->
     <div class="filter-group">
       <label class="filter-label">Поиск</label>
       <input
@@ -17,7 +16,6 @@
       />
     </div>
 
-    <!-- Brands -->
     <div class="filter-group">
       <label class="filter-label">Бренд</label>
       <div class="checkbox-group">
@@ -32,7 +30,6 @@
       </div>
     </div>
 
-    <!-- Categories -->
     <div class="filter-group">
       <label class="filter-label">Категория</label>
       <div class="checkbox-group">
@@ -47,7 +44,6 @@
       </div>
     </div>
 
-    <!-- Price Range -->
     <div class="filter-group">
       <label class="filter-label">Цена</label>
       <div class="price-inputs">
@@ -69,7 +65,6 @@
       </div>
     </div>
 
-    <!-- Sizes -->
     <div class="filter-group">
       <label class="filter-label">Размер</label>
       <div class="size-grid">
@@ -151,7 +146,6 @@ const formatCategory = (category) => {
   return map[category] || category;
 };
 
-// Watch for external changes
 watch(() => sneakersStore.searchQuery, (newVal) => {
   localSearch.value = newVal;
 });

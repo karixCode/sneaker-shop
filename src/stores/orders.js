@@ -9,7 +9,6 @@ export const useOrdersStore = defineStore('orders', () => {
   const loading = ref(false);
   const error = ref(null);
 
-  // Actions
   const fetchOrders = async () => {
     loading.value = true;
     error.value = null;
@@ -18,7 +17,6 @@ export const useOrdersStore = defineStore('orders', () => {
       orders.value = response.data;
     } catch (err) {
       error.value = err.message;
-      console.error('Error fetching orders:', err);
     } finally {
       loading.value = false;
     }
@@ -31,7 +29,6 @@ export const useOrdersStore = defineStore('orders', () => {
       const cartStore = useCartStore();
       const sneakersStore = useSneakersStore();
 
-      // Prepare order items
       const items = cartStore.cartItems.map(item => {
         const sneaker = sneakersStore.sneakers.find(s => s.id === item.sneakerId);
         return {
@@ -53,13 +50,11 @@ export const useOrdersStore = defineStore('orders', () => {
       const response = await api.createOrder(order);
       orders.value.push(response.data);
 
-      // Clear cart after successful order
       await cartStore.clearCart();
 
       return response.data;
     } catch (err) {
       error.value = err.message;
-      console.error('Error creating order:', err);
       return null;
     } finally {
       loading.value = false;

@@ -3,27 +3,22 @@ import { ref, computed } from 'vue';
 import * as api from '../api';
 
 export const useSneakersStore = defineStore('sneakers', () => {
-  // State
   const sneakers = ref([]);
   const currentSneaker = ref(null);
   const loading = ref(false);
   const error = ref(null);
 
-  // Filters
   const searchQuery = ref('');
   const selectedBrands = ref([]);
   const selectedCategories = ref([]);
   const priceRange = ref({min: 0, max: 100000});
   const selectedSize = ref(null);
 
-  // View mode
-  const viewMode = ref('grid'); // 'grid' or 'list'
+  const viewMode = ref('grid');
 
-  // Pagination
   const currentPage = ref(1);
   const itemsPerPage = ref(12);
 
-  // Computed
   const brands = computed(() => {
     const uniqueBrands = [...new Set(sneakers.value.map(s => s.brand))];
     return uniqueBrands.sort();
@@ -37,7 +32,6 @@ export const useSneakersStore = defineStore('sneakers', () => {
   const filteredSneakers = computed(() => {
     let result = [...sneakers.value];
 
-    // Search
     if (searchQuery.value) {
       const query = searchQuery.value.toLowerCase();
       result = result.filter(s =>
@@ -46,22 +40,18 @@ export const useSneakersStore = defineStore('sneakers', () => {
       );
     }
 
-    // Brand filter
     if (selectedBrands.value.length > 0) {
       result = result.filter(s => selectedBrands.value.includes(s.brand));
     }
 
-    // Category filter
     if (selectedCategories.value.length > 0) {
       result = result.filter(s => selectedCategories.value.includes(s.category));
     }
 
-    // Price filter
     result = result.filter(s =>
         s.price >= priceRange.value.min && s.price <= priceRange.value.max
     );
 
-    // Size filter
     if (selectedSize.value) {
       result = result.filter(s => s.sizes.includes(selectedSize.value));
     }
@@ -79,7 +69,6 @@ export const useSneakersStore = defineStore('sneakers', () => {
     return Math.ceil(filteredSneakers.value.length / itemsPerPage.value);
   });
 
-  // Actions
   const fetchSneakers = async () => {
     loading.value = true;
     error.value = null;
@@ -163,7 +152,6 @@ export const useSneakersStore = defineStore('sneakers', () => {
   };
 
   return {
-    // State
     sneakers,
     currentSneaker,
     loading,
@@ -177,14 +165,12 @@ export const useSneakersStore = defineStore('sneakers', () => {
     currentPage,
     itemsPerPage,
 
-    // Computed
     brands,
     categories,
     filteredSneakers,
     paginatedSneakers,
     totalPages,
 
-    // Actions
     fetchSneakers,
     fetchSneakerById,
     setSearchQuery,

@@ -2,7 +2,6 @@
   <div class="catalog">
     <div class="container">
       <div class="catalog-layout">
-        <!-- Filters Sidebar -->
         <aside class="filters-sidebar" :class="{ open: filtersOpen }">
           <button @click="filtersOpen = false" class="close-filters">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -12,9 +11,7 @@
           <Filters />
         </aside>
 
-        <!-- Main Content -->
         <main class="catalog-main">
-          <!-- Toolbar -->
           <div class="toolbar">
             <div class="toolbar-left">
               <button @click="filtersOpen = true" class="filters-toggle">
@@ -57,19 +54,16 @@
             </div>
           </div>
 
-          <!-- Loading -->
           <div v-if="loading" class="loading">
             <div class="spinner"></div>
             <p>Загрузка товаров...</p>
           </div>
 
-          <!-- Error -->
           <div v-else-if="error" class="error">
             <p>{{ error }}</p>
             <button @click="fetchSneakers" class="retry-btn">Попробовать снова</button>
           </div>
 
-          <!-- Products Grid -->
           <div v-else-if="paginatedSneakers.length > 0" :class="['products-grid', viewMode]">
             <SneakerCard
               v-for="sneaker in paginatedSneakers"
@@ -80,7 +74,6 @@
             />
           </div>
 
-          <!-- No Results -->
           <div v-else class="no-results">
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
               <circle cx="11" cy="11" r="8"/>
@@ -91,7 +84,6 @@
             <button @click="resetFilters" class="reset-btn">Сбросить фильтры</button>
           </div>
 
-          <!-- Pagination -->
           <div v-if="totalPages > 1" class="pagination">
             <button
               @click="setPage(currentPage - 1)"
@@ -121,7 +113,6 @@
             </button>
           </div>
 
-          <!-- View History -->
           <section v-if="viewHistory.length > 0" class="view-history">
             <div class="section-header">
               <h2>Вы смотрели</h2>
@@ -141,7 +132,6 @@
       </div>
     </div>
 
-    <!-- Quick Add Modal -->
     <Teleport to="body">
       <div v-if="quickAddModal" class="modal-overlay" @click="closeQuickAdd">
         <div class="modal-content" @click.stop>
@@ -195,10 +185,7 @@ const totalPages = computed(() => sneakersStore.totalPages);
 
 const viewHistory = computed(() => viewHistoryStore.viewedSneakerIds);
 const viewHistorySneakers = computed(() => {
-  return viewHistory.value
-    .map(id => sneakersStore.sneakers.find(s => s.id === id))
-    .filter(Boolean)
-    .slice(0, 4);
+  return sneakersStore.sneakers.filter(sneaker => viewHistory.value.includes(Number(sneaker.id))).slice(0, 3);
 });
 
 const visiblePages = computed(() => {
@@ -243,7 +230,6 @@ const addToCart = async (sneakerId, size) => {
   const success = await cartStore.addToCart(sneakerId, size);
   if (success) {
     closeQuickAdd();
-    // You could add a toast notification here
   }
 };
 

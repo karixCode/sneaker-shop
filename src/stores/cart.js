@@ -8,7 +8,6 @@ export const useCartStore = defineStore('cart', () => {
   const loading = ref(false);
   const error = ref(null);
 
-  // Computed
   const itemsCount = computed(() => {
     return cartItems.value.reduce((sum, item) => sum + item.quantity, 0);
   });
@@ -32,7 +31,6 @@ export const useCartStore = defineStore('cart', () => {
     });
   });
 
-  // Actions
   const fetchCartItems = async () => {
     loading.value = true;
     error.value = null;
@@ -51,13 +49,11 @@ export const useCartStore = defineStore('cart', () => {
     loading.value = true;
     error.value = null;
     try {
-      // Check if item already exists
       const existingItem = cartItems.value.find(
         item => item.sneakerId === sneakerId && item.size === size
       );
 
       if (existingItem) {
-        // Update quantity
         const newQuantity = existingItem.quantity + quantity;
         const response = await api.updateCartItem(existingItem.id, {
           ...existingItem,
@@ -66,7 +62,6 @@ export const useCartStore = defineStore('cart', () => {
         const index = cartItems.value.findIndex(item => item.id === existingItem.id);
         cartItems.value[index] = response.data;
       } else {
-        // Add new item
         const response = await api.addToCart({
           sneakerId,
           size,
@@ -77,7 +72,6 @@ export const useCartStore = defineStore('cart', () => {
       return true;
     } catch (err) {
       error.value = err.message;
-      console.error('Error adding to cart:', err);
       return false;
     } finally {
       loading.value = false;
@@ -103,7 +97,6 @@ export const useCartStore = defineStore('cart', () => {
       }
     } catch (err) {
       error.value = err.message;
-      console.error('Error updating cart item:', err);
     } finally {
       loading.value = false;
     }
@@ -117,7 +110,6 @@ export const useCartStore = defineStore('cart', () => {
       cartItems.value = cartItems.value.filter(item => item.id !== itemId);
     } catch (err) {
       error.value = err.message;
-      console.error('Error removing from cart:', err);
     } finally {
       loading.value = false;
     }
@@ -131,7 +123,6 @@ export const useCartStore = defineStore('cart', () => {
       cartItems.value = [];
     } catch (err) {
       error.value = err.message;
-      console.error('Error clearing cart:', err);
     } finally {
       loading.value = false;
     }

@@ -5,7 +5,7 @@
       <button
         @click.stop="addToCartHandler"
         class="quick-add-btn"
-        title="Быстрое добавление"
+        title="Добавить в корзину"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 2L7 6H3L6 18H18L21 6H17L15 2H9Z"/>

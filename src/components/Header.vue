@@ -16,12 +16,12 @@
         </nav>
 
         <div class="header-actions">
-          <button @click="$emit('toggle-search')" class="icon-btn" title="Поиск">
+          <router-link to="/" class="icon-btn" title="Поиск">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"/>
               <path d="M21 21l-4.35-4.35"/>
             </svg>
-          </button>
+          </router-link>
 
           <router-link to="/cart" class="icon-btn cart-btn" title="Корзина">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

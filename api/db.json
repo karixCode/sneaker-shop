@@ -416,22 +416,14 @@
       "rating": 5,
       "comment": "Ultraboost - самые комфортные кроссовки, которые у меня были!",
       "createdAt": "2024-10-20T10:30:00Z"
-    },
-    {
-      "id": "78dd",
-      "sneakerId": "2",
-      "userName": "Иван",
-      "rating": 3,
-      "comment": "имба",
-      "createdAt": "2025-11-24T13:51:23.371Z"
     }
   ],
   "cartItems": [
     {
-      "id": "7eeb",
+      "id": "a41e",
       "sneakerId": "1",
-      "size": 40,
-      "quantity": 4
+      "size": 39,
+      "quantity": 1
     }
   ],
   "orders": [
@@ -524,6 +516,27 @@
         "paymentMethod": "cash"
       },
       "createdAt": "2025-11-24T06:55:52.097Z"
+    },
+    {
+      "id": "ef4a",
+      "items": [
+        {
+          "sneakerId": "1",
+          "size": 40,
+          "quantity": 4,
+          "price": 12990
+        }
+      ],
+      "totalAmount": 51960,
+      "status": "pending",
+      "customer": {
+        "name": "Иванов Иван Евгеньевич",
+        "email": "Admin@admin.com",
+        "phone": "+78888888888",
+        "address": "Область Томская, Город Томск, Улица Алтайская дом 169 кв.1",
+        "paymentMethod": "sbp"
+      },
+      "createdAt": "2025-11-24T14:48:54.479Z"
     }
   ]
 }

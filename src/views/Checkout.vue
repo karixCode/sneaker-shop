@@ -189,7 +189,6 @@
       </div>
     </div>
 
-    <!-- Success Modal -->
     <Teleport to="body">
       <div v-if="orderSuccess" class="modal-overlay" @click="closeSuccess">
         <div class="modal-content success-modal" @click.stop>

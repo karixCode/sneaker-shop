@@ -9,21 +9,17 @@ const api = axios.create({
   },
 });
 
-// Sneakers
 export const getSneakers = (params) => api.get('/sneakers', { params });
 export const getSneakerById = (id) => api.get(`/sneakers/${id}`);
 
-// Reviews
 export const getReviews = (sneakerId) => api.get('/reviews', { params: { sneakerId } });
 export const addReview = (review) => api.post('/reviews', review);
 
-// Cart
 export const getCartItems = () => api.get('/cartItems');
 export const addToCart = (item) => api.post('/cartItems', item);
 export const updateCartItem = (id, item) => api.patch(`/cartItems/${id}`, item);
 export const removeFromCart = (id) => api.delete(`/cartItems/${id}`);
 
-// Orders
 export const getOrders = () => api.get('/orders');
 export const createOrder = (order) => api.post('/orders', order);
 

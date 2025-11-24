@@ -7,7 +7,6 @@ export const useReviewsStore = defineStore('reviews', () => {
   const loading = ref(false);
   const error = ref(null);
 
-  // Computed
   const reviewsBySneaker = computed(() => {
     return (sneakerId) => reviews.value.filter(r => r.sneakerId === sneakerId);
   });
@@ -21,20 +20,17 @@ export const useReviewsStore = defineStore('reviews', () => {
     };
   });
 
-  // Actions
   const fetchReviews = async (sneakerId) => {
     loading.value = true;
     error.value = null;
     try {
       const response = await api.getReviews(sneakerId);
-      // Merge with existing reviews
       const newReviews = response.data.filter(
         newReview => !reviews.value.some(r => r.id === newReview.id)
       );
       reviews.value = [...reviews.value, ...newReviews];
     } catch (err) {
       error.value = err.message;
-      console.error('Error fetching reviews:', err);
     } finally {
       loading.value = false;
     }
@@ -56,7 +52,6 @@ export const useReviewsStore = defineStore('reviews', () => {
       return true;
     } catch (err) {
       error.value = err.message;
-      console.error('Error adding review:', err);
       return false;
     } finally {
       loading.value = false;

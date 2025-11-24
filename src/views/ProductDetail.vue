@@ -14,7 +14,6 @@
       </div>
 
       <div v-else-if="sneaker" class="product-content">
-        <!-- Image Gallery -->
         <div class="gallery">
           <div class="main-image">
             <img :src="currentImage" :alt="sneaker.name" />
@@ -31,7 +30,6 @@
           </div>
         </div>
 
-        <!-- Product Info -->
         <div class="product-info">
           <div class="brand-badge">{{ sneaker.brand }}</div>
           <h1 class="product-title">{{ sneaker.name }}</h1>
@@ -58,7 +56,6 @@
 
           <div class="category-tag">{{ formatCategory(sneaker.category) }}</div>
 
-          <!-- Size Selection -->
           <div class="size-selection">
             <label class="size-label">Выберите размер:</label>
             <div class="sizes-grid">
@@ -73,7 +70,6 @@
             </div>
           </div>
 
-          <!-- Add to Cart -->
           <button
             @click="handleAddToCart"
             :disabled="!selectedSize || addingToCart"
@@ -93,7 +89,6 @@
         </div>
       </div>
 
-      <!-- Reviews Section -->
       <section v-if="sneaker" class="reviews-section">
         <div class="reviews-header">
           <h2>Отзывы</h2>
@@ -102,7 +97,6 @@
           </button>
         </div>
 
-        <!-- Review Form -->
         <div v-if="showReviewForm" class="review-form">
           <h3>Ваш отзыв</h3>
           <div class="form-group">
@@ -140,7 +134,6 @@
           </button>
         </div>
 
-        <!-- Reviews List -->
         <div class="reviews-list">
           <div v-if="reviews.length === 0" class="no-reviews">
             <p>Пока нет отзывов. Будьте первым!</p>
