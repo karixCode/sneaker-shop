@@ -47,12 +47,6 @@ body {
   padding: 0 1rem;
 }
 
-@media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 700;

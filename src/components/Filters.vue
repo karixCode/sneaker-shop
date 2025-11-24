@@ -292,11 +292,5 @@ watch(() => sneakersStore.priceRange, (newVal) => {
   border-color: #2563eb;
   color: #fff;
 }
-
-@media (max-width: 768px) {
-  .filters {
-    position: static;
-  }
-}
 </style>
 

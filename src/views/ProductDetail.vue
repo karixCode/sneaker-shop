@@ -215,7 +215,7 @@ const showZoom = ref(false);
 const imageContainer = ref(null);
 const mainImage = ref(null);
 const lensPosition = ref({ x: 0, y: 0 });
-const zoomLevel = 2.5; // Уровень увеличения
+const zoomLevel = 2.5;
 
 const reviewForm = ref({
   userName: '',
@@ -663,7 +663,6 @@ onMounted(async () => {
   }
 }
 
-/* Reviews */
 .reviews-section {
   background: #fff;
   border-radius: 16px;
@@ -843,45 +842,6 @@ onMounted(async () => {
   margin: 0;
   color: #666;
   line-height: 1.6;
-}
-
-@media (max-width: 1024px) {
-  .product-content {
-    grid-template-columns: 1fr;
-  }
-
-  /* Скрываем zoom на планшетах и мобильных */
-  .zoom-result {
-    display: none !important;
-  }
-
-  .main-image {
-    cursor: default;
-  }
-}
-
-@media (max-width: 640px) {
-  .product-title {
-    font-size: 1.5rem;
-  }
-
-  .price {
-    font-size: 2rem;
-  }
-
-  .sizes-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  }
-
-  .reviews-header {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
-
-  .add-review-btn {
-    width: 100%;
-  }
 }
 </style>
 

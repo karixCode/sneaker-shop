@@ -246,17 +246,5 @@ const addToCartHandler = () => {
   font-weight: 600;
   color: #333;
 }
-
-@media (max-width: 768px) {
-  .sneaker-card.list {
-    flex-direction: column;
-  }
-
-  .sneaker-card.list .card-image {
-    width: 100%;
-    padding-top: 100%;
-    height: auto;
-  }
-}
 </style>
 

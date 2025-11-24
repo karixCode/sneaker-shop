@@ -101,7 +101,7 @@ const zoomLevel = 3.0; // Увеличить до 3x
 ### Изменить размер лупы:
 ```css
 .zoom-lens {
-  width: 200px;  /* Было 150px */
+  width: 200px;
   height: 200px;
 }
 ```
@@ -114,7 +114,7 @@ const lensSize = 200; // В handleMouseMove
 ### Изменить цвет лупы:
 ```css
 .zoom-lens {
-  border: 3px solid #10b981; /* Зеленый вместо синего */
+  border: 3px solid #10b981;
   background: rgba(16, 185, 129, 0.15);
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
 }

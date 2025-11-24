@@ -153,19 +153,5 @@ const cartItemsCount = computed(() => cartStore.itemsCount);
   min-width: 1.25rem;
   text-align: center;
 }
-
-@media (max-width: 768px) {
-  .nav {
-    gap: 1rem;
-  }
-
-  .nav-link {
-    font-size: 0.875rem;
-  }
-
-  .logo span {
-    display: none;
-  }
-}
 </style>
 

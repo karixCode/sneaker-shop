@@ -377,42 +377,5 @@ onMounted(async () => {
   font-weight: 700;
   color: #333;
 }
-
-@media (max-width: 768px) {
-  .order-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .order-status {
-    width: 100%;
-    text-align: center;
-  }
-
-  .order-item {
-    grid-template-columns: 60px 1fr;
-    gap: 0.75rem;
-  }
-
-  .order-item-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .order-item-price {
-    grid-column: 2;
-    justify-self: end;
-  }
-
-  .order-footer {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .order-total {
-    text-align: left;
-  }
-}
 </style>
 

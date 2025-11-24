@@ -495,7 +495,6 @@ onMounted(async () => {
   gap: 1rem;
 }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -575,74 +574,6 @@ onMounted(async () => {
   border-color: #2563eb;
   color: #2563eb;
   transform: translateY(-2px);
-}
-
-/* Mobile */
-@media (max-width: 1024px) {
-  .catalog-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .filters-sidebar {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    bottom: 0;
-    width: 80%;
-    max-width: 300px;
-    background: #fff;
-    z-index: 999;
-    transition: left 0.3s;
-    overflow-y: auto;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .filters-sidebar.open {
-    left: 0;
-  }
-
-  .close-filters {
-    display: flex;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #666;
-    padding: 0.5rem;
-    z-index: 1;
-  }
-
-  .filters-toggle {
-    display: flex;
-  }
-
-  .products-grid.grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .toolbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .toolbar-left,
-  .toolbar-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .products-grid.grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-
-  .history-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 </style>
 

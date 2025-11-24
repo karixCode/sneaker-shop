@@ -456,46 +456,5 @@ const clearCartHandler = () => {
   justify-content: center;
   font-size: 1.5rem;
 }
-
-@media (max-width: 1024px) {
-  .cart-content {
-    grid-template-columns: 1fr;
-  }
-
-  .cart-summary {
-    position: static;
-  }
-}
-
-@media (max-width: 768px) {
-  .cart-item {
-    grid-template-columns: 80px 1fr;
-    gap: 1rem;
-  }
-
-  .item-image {
-    width: 80px;
-    height: 80px;
-  }
-
-  .item-quantity,
-  .item-price {
-    grid-column: 2;
-  }
-
-  .item-quantity {
-    justify-self: start;
-  }
-
-  .item-price {
-    justify-self: end;
-    text-align: right;
-  }
-
-  .remove-btn {
-    grid-column: 1;
-    grid-row: 2;
-  }
-}
 </style>
 

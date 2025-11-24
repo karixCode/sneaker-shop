@@ -618,7 +618,6 @@ const closeSuccess = () => {
   transform: none;
 }
 
-/* Modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -710,20 +709,6 @@ const closeSuccess = () => {
 
 .success-btn:not(.primary):hover {
   background: #f0f9ff;
-}
-
-@media (max-width: 1024px) {
-  .checkout-content {
-    grid-template-columns: 1fr;
-  }
-
-  .order-summary {
-    position: static;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
 
